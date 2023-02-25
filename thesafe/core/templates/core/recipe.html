@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <title>Selected Recipe</title>
+    <style>
+        #box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .element{
+            background-color:antiquewhite;
+            padding: 20px ;
+            border-radius: 20px ;
+            font-family: 'Gloock', serif;
+            font-weight: bolder;
+            width: 80%;
+            text-align: center;
+            font-size: 30px ;
+        }
+        .li_items{
+            margin: 10px ;
+        }
+        #flexbox2{
+            display: flex;
+            margin: 10px ;
+        }
+        #checkpoints{
+            height: 180px ;
+            background-color: antiquewhite;
+            border-radius: 19px ;
+            padding: 10px ;
+            width: 25%;
+            /* display: flex;
+            flex-direction: column; */
+        }
+        .option{
+            margin: 10px ;
+        }
+        #allergen_headers{
+            font-weight: 900;
+            font-size: larger;
+            text-align: center;
+        }
+        #ingredients{
+            text-align: center;
+            background-color: aquamarine;
+            border-radius: 19px ;
+            padding: 5px ;
+        }
+        #mainbox{
+            width: 50%;
+            margin: 5px 10px ;
+            /* background-color: antiquewhite; */
+            border-radius: 19px;
+            padding: 5px ;
+        }
+        label{
+            text-align: center;
+        }
+        #information{
+            text-align: center;
+            background-color:darkgoldenrod;
+            border-radius: 19px ;
+            margin-top: 10px ;
+            padding: 20px ;
+        }
+        img{
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="element" >
+            Reciepe_name
+        </div>
+    </div>
+    <div id="flexbox2">
+        <div id="checkpoints">
+            <div class="option" id="allergen_headers">Select the Allergens:</div>
+            
+            <div class="option">
+                <input type="checkbox" name="hasgluten" id="">
+                <label for="hasGluten">Gluten</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" name="hasNuts" id="">
+                <label for="hasNuts">Nuts</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" name="hasDairy" id="">
+                <label for="hasDairy">Dairy Products</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" name="isVegan" id="">
+                <label for="isVegan">Vegan</label>
+            </div>
+        </div>
+        <div id="mainbox">
+            <div id="ingredients">
+                <div>List of ingredients</div>
+                <ul>
+                    <li>First Ingedient</li>
+                    <li>Second Ingredient</li>
+                    <li>Third Ingredients</li>
+                </ul>
+            </div>
+            <div id="information">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum vitae eos reiciendis officiis asperiores perferendis beatae rerum dicta voluptatem eligendi voluptas esse, hic maxime, recusandae magnam error culpa enim laboriosam nesciunt. Officia eveniet, voluptatum delectus quod ratione suscipit magnam repellendus ipsum ipsa nemo error distinctio id neque temporibus deserunt fuga laboriosam aperiam minima. Hic libero ab, consequuntur optio incidunt molestiae in minima aperiam ad nostrum, fuga magnam debitis delectus magni nobis vero illum molestias, rerum tenetur at dolorum omnis accusamus! Rem sapiente iste nisi repellendus eveniet ut laudantium ipsam, optio voluptas, architecto libero cupiditate. Fugit consequatur eligendi explicabo illo nemo.
+            </div>
+        </div>
+        <img src="./5-weird-foreign-fast-food-items-that-companies-should-bring-to-america.jpg" alt="" srcset="">
+    </div>
+</body>
+</html>
