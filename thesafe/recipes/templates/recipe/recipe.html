@@ -69,6 +69,7 @@
             text-align: center;
         }
         #information{
+            color:whitesmoke;
             text-align: center;
             background-color:darkgoldenrod;
             border-radius: 19px ;
@@ -83,7 +84,7 @@
 <body>
     <div id="box">
         <div class="element" >
-            Reciepe_name
+            {{ recipe.name }}
         </div>
     </div>
     <div id="flexbox2">
@@ -111,16 +112,16 @@
             <div id="ingredients">
                 <div>List of ingredients</div>
                 <ul>
-                    <li>First Ingedient</li>
-                    <li>Second Ingredient</li>
-                    <li>Third Ingredients</li>
+                    {% for item in recipe.ingredient %}
+                    <li>{{item}}</li>
+                    {% endfor %}
                 </ul>
             </div>
             <div id="information">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum vitae eos reiciendis officiis asperiores perferendis beatae rerum dicta voluptatem eligendi voluptas esse, hic maxime, recusandae magnam error culpa enim laboriosam nesciunt. Officia eveniet, voluptatum delectus quod ratione suscipit magnam repellendus ipsum ipsa nemo error distinctio id neque temporibus deserunt fuga laboriosam aperiam minima. Hic libero ab, consequuntur optio incidunt molestiae in minima aperiam ad nostrum, fuga magnam debitis delectus magni nobis vero illum molestias, rerum tenetur at dolorum omnis accusamus! Rem sapiente iste nisi repellendus eveniet ut laudantium ipsam, optio voluptas, architecto libero cupiditate. Fugit consequatur eligendi explicabo illo nemo.
+                {{ recipe.description }}
             </div>
         </div>
-        <img src="./5-weird-foreign-fast-food-items-that-companies-should-bring-to-america.jpg" alt="" srcset="">
+        <img src="https://vaurkhorov.github.io/make5/{{ recipe.picture }}" alt="" srcset="">
     </div>
 </body>
 </html>

@@ -26,6 +26,12 @@
             align-items: center;
             margin: 18px;
         }
+        .card_body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }   
     </style>
 </head>
 <body>
@@ -33,33 +39,19 @@
         Search Results 
     </div>
     <div class="cards">
-    <div class="card" style="width: 18rem;">
-        <img src="./tempting-jalebi.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="./reciepe_proceed.html" class="btn btn-primary">Go somewhere</a>
+      {% for item in recipes %}    
+        <div class="card" style="width: 18rem; height: 100px">
+            <img src="https://vaurkhorov.github.io/make5{{ item.picture.url }}" class="card-img-top" alt="...">
+              <div class="card_body">
+                <h5 class="card-title" style="font-weight: 800; margin: 7px 0px ;">{{ item.name }}</h5>
+                <p class="card-text"> {{ item.description }} </p>
+                <a href="./recipe/{{ item.name }}" class="btn btn-primary">Go somewhere</a>
+              </div>
         </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="./5-weird-foreign-fast-food-items-that-companies-should-bring-to-america.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="./reciepe_proceed.html" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="./5-weird-foreign-fast-food-items-that-companies-should-bring-to-america.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="./reciepe_proceed.html" class="btn btn-primary">Go somewhere</a>
-        </div>
+      {% endfor %}
       </div>
       </div>
 </body>
-<script>
-
+<script> 
 </script>
 </html>
