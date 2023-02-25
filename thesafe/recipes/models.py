@@ -17,6 +17,7 @@ class Ingredient(models.Model):
     hasDairy = models.BooleanField()
     hasNuts = models.BooleanField()
     hasGluten = models.BooleanField()
+    hasOnionOrGarlic = models.BooleanField()
 
     class Meta:
         ordering = ("name", )
@@ -29,6 +30,7 @@ class Recipe(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
     ingredient = models.ManyToManyField(Ingredient)
+    picture = models.ImageField(upload_to="recipe_images", null=True)
 
     class Meta:
         ordering = ("name", )
