@@ -4,15 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
     <title>Selected Recipe</title>
     <style>
+        #box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .element{
+            background-color:antiquewhite;
+            padding: 20px ;
+            border-radius: 20px ;
+            font-family: 'Gloock', serif;
+            font-weight: bolder;
+            width: 80%;
+            text-align: center;
+            font-size: 30px ;
+        }
+        .li_items{
+            margin: 10px ;
+        }
+        .recipe_list{}
     </style>
 </head>
 <body>
-    <div id="header" style="margin: 5px ;
-    height: 20px ;
-    width: 80%;
-    border: 2px black;
-">Reciepe's name</div>
+    <div id="box">
+        <div class="element" >
+            Reciepe_name
+        </div>
+        <div class="recipe_list">
+            <ul>
+                <li class="li_items">First Component</li>
+                <li class="li_items">Second Component</li>
+            </ul>
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ipsam nemo soluta officiis nostrum at debitis alias! Sit optio quo accusamus in obcaecati possimus excepturi ducimus aspernatur illo sed? Sunt!
+        </div>
+    </div>
 </body>
 </html>
