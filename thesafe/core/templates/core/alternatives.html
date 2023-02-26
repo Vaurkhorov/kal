@@ -14,7 +14,7 @@
     {% load static %}
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
 
-    <title>Recipes</title>
+    <title>Safer alternatives for you</title>
     <style>
         .cards{
             display: flex;
@@ -49,7 +49,7 @@
               <div class="card_body">
                 <h5 class="card-title" style="font-weight: 800; margin: 7px 0px ;">{{ item.name }}</h5>
                 <p class="card-text"> {{ item.description }} </p>
-                <a href="../recipe/{{ item.name }}" class="btn btn-primary">Open Recipe</a>
+                <a href="../../recipe/{{ item.name }}" class="btn btn-primary">Open Recipe</a>
               </div>
         </div>
       {% endfor %}

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -124,4 +124,166 @@
         <img src="https://vaurkhorov.github.io/make5/{{ recipe.picture }}" alt="" srcset="">
     </div>
 </body>
+</html> -->
+<!-- --------------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
+
+    <title>{{ recipe.name }} Recipe</title>
+    <style>
+        * {
+            margin: 0px;
+            background-color;
+        }
+
+        #search_bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+            width: 100%;
+            background-color: darkgreen;
+        }
+
+        #icon {
+            /* margin-right: 300px ; */
+            margin: 10px;
+            margin-left: 30px;
+            font-size: larger;
+            color: white;
+            font-weight: bold;
+        }
+
+        #search {
+            margin-right: 20px;
+        }
+
+        #flexbox1 {
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+        #flexbox2{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid black;
+            border-radius: 14px;
+            padding: 10px ;
+            margin: 10px ;
+        }
+        #checkbox{
+            margin: 10px ;
+            padding: 20px ;
+            display: flex;
+            flex-direction: column;
+            align-items: left ;
+            background-color: rgb(255, 255, 255);
+            margin: 10px ;
+            border: 1px solid black;
+            border-radius: 14px;
+        }
+        .row{
+            margin: 10px 0px ;
+            font-size: large;
+
+        }
+        .labels{
+            margin: 5px ;;
+        }
+        #btn_final{
+            margin: 10px ;
+            height: 40px ;
+            background-color: greenyellow;
+            border: 0px ;
+            border-radius: 5px ;
+            font-size: large;
+        }
+        #btn_final1{
+            margin: 10px ;
+            height: 40px ;
+            background-color: white ;
+            border: 0px ;
+            border-radius: 5px ;
+            font-size: large;
+
+        }
+        #btn_final :hover{
+            background-color: white;
+            color: greenyellow;
+        }
+        .order_btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black ;
+            padding: 5px ;
+            margin-top: 15px ;
+            border-radius: 10px ;
+            /* background-color: rgb(136, 73, 179); */
+        }
+    </style>
+</head>
+
+<body style="background-color: antiquewhite;">
+        <div id="search_bar">
+            <div id="icon">Safe Eateries</div>
+            <div id="search">
+                <input type="text" id="text_input" style="width: 900px;">
+                <button type="submit" id="submt_btn" onclick="
+    let url = '../../search/' + document.getElementById('text_input').value;
+    window.open(url);">Search
+                </button>
+            </div>
+        </div>
+        <section>
+            <div id="flexbox1" style="border: 2px black;">
+                <div><img src="https://vaurkhorov.github.io/make5/assets/{{ recipe.picture }}" alt=""
+                    style="width: 500px; padding: 10px 0px;"></div>
+                <div id="flexbox2" style="width: 400px ;">
+                    <h1 style="font-size: xx-large; margin-bottom: 20px;">{{ recipe.name }}</h1>
+                    <h5 style="font-size: 22px; text-align: center; margin-bottom: 10px ;">{{ recipe.description }}
+                        {{ ingredients }}
+                    </h5>
+                    <div class="order_btn">
+                        <h6 style="font-size: large;">Order on </h6>
+                    <button id="btn_final1">
+                        <a style="color: chocolate;" href="https://www.amazon.in/s?k={{ recipe.name }}" target="_blank"><img src="https://Vaurkhorov.github.io/make5/assets/56-565024_amazon-png.png" style="width: 80%; height: 80%;" alt="Order on Amazon"></a>
+                    </button>
+                    </div>
+                    <div class="order_btn">
+                        <h6 style="font-size: large;">Watch on </h6>
+                    <button id="btn_final1">
+                        <a style="color: chocolate;" href="https://www.youtube.com/results?search_query={{ recipe.name }}+recipe" target="_blank"><img src="https://th.bing.com/th/id/OIP.NLwHaUpbvL8aqA7lvOG-4gHaEH?w=313&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" style="width: 100%; height: 100%;" alt="Order on Amazon"></a>
+                    </button>
+                    </div>
+                </div>
+                <div id="checkbox" style="width: 500px ;">
+                    <h2>Select the Allergens: </h2>
+                    <br>
+                    <div class="row"><input type="checkbox" name="" id=""><label class="labels" for=""></label>Vegan</div>
+                    <div class="row"><input type="checkbox" name="" id=""><label class="labels"for=""></label>Dairy</div>
+                    <div class="row"><input type="checkbox" name="" id=""><label class="labels" for=""></label>Nuts</div>
+                    <div class="row"><input type="checkbox" name="" id=""><label class="labels" for=""></label>Gluten</div>
+                    <div class="row"><input type="checkbox" name="" id=""><label class="labels" for=""></label>Onion/Garlic</div>
+                    <button id="btn_final" onclick="
+                        let url2 = '../../alternatives/1/Soya Tikki Burger';
+                        window.open(url2);">Find Alternatives
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- src="https://www.youtube.com/embed/oH3_HavaCf0" -->
+</body>
+
 </html>

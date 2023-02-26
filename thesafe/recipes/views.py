@@ -5,5 +5,5 @@ def detail(request, id):
     recipe = Recipe.objects.filter(name = id).values()[0]
 
     return render(request, "recipe/recipe.html/", {
-        "recipe": recipe
+        "recipe": recipe,
     })
